@@ -191,6 +191,22 @@
   }
 }
 
+.loading {
+  height: calc(100vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .spinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #1E90FF transparent #1E90FF transparent;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+  }
+}
+
 .restaurant-wrapper {
   width: 100%;
 
@@ -233,6 +249,26 @@
       color: #fff;
       font-size: 0.9rem;
     }
+
+    .header-phone-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: .9rem;
+      color: #fff;
+
+      .website {
+        color: #b0b4b8;
+      }
+
+      .phone-bullet {
+        padding: 7px 20px;
+        background-color: #b0b4b88f;
+        color: #fff;
+        width: fit-content;
+        border-radius: 25px;
+      }
+    }
   }
 
   .image-wrapper::before {
@@ -247,8 +283,11 @@
   }
 
   .restaurant-content {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     .location-wrapper {
       h4 {
@@ -323,9 +362,14 @@
     }
 
     .reviews {
+      h4 {
+        font-size: 1.4rem;
+        margin: 1rem 0;
+      }
+
       .review {
         margin: 2rem 1rem;
-        max-width: 600px;
+        max-width: 500px;
 
         .user {
           display: flex;
@@ -342,6 +386,10 @@
               width: 100%;
               height: 100%;
               object-fit: cover;
+            }
+
+            img::before {
+              background: none;
             }
           }
 
@@ -455,6 +503,45 @@
         width: 100%;
         height: 50px;
       }
+    }
+  }
+
+  .restaurant-wrapper {
+    .image-wrapper {
+      h2 {
+        top: 63%;
+      }
+
+      .header-rating {
+        flex-direction: column;
+        align-items: flex-start;
+        top: 74%;
+        gap: .5rem;
+
+        .rating {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+        }
+
+        .categories {
+          display: flex;
+          flex-direction: row;
+          gap: .5rem;
+        }
+
+        .website {
+          font-size: 0.7rem;
+        }
+
+        .phone-bullet {
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .restaurant-content {
+      flex-direction: column;
     }
   }
 }
